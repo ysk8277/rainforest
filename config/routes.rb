@@ -1,5 +1,8 @@
 Rainforest::Application.routes.draw do
+ 
   resources :products
+
+  root :to => 'products#index'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
