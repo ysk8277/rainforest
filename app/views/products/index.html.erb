@@ -1,9 +1,9 @@
-<h>All products</h1>
+<h2>Home</h2>
 
-<p><%= link_to "Add new product", new_product_path %></p>
+<p><%= link_to "Sign up", new_user_path %> | <%= link_to "Add new product", new_product_path %></p>
 
+<h3>All Products</h3>
 <% @products.each do |product| %>
-  <p>Product ID: <%= product[:id] %></p>
   <p>Product name: <%= product[:name] %></p>
   <p>Price: $<%= product.formatted_price %></p>
 <%= link_to "Show detail", product_path(product) %> 
