@@ -1,11 +1,10 @@
 <h>All products</h1>
 
+<p><%= link_to "Add new product", new_product_path %></p>
+
 <% @products.each do |product| %>
   <p>Product ID: <%= product[:id] %></p>
-  <p>Product name:</p>
-  <p><%= product[:name] %></p>
-  <p>Description:</p>
-  <p><%= product[:description] %></p>
-  <p>Price:</p>
-  <p><%= product[:price_in_cents] %></p>
+  <p>Product name: <%= product[:name] %></p>
+  <p>Price: <%= product[:price_in_cents] %></p>
+<%= link_to "Show detail", product_path(product) %> 
 <% end %>
