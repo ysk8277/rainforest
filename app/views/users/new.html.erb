@@ -1,6 +1,7 @@
 <h2>Sign Up</h2>
 
 <%= form_for @user do |f| %>
+  
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -25,4 +26,7 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit %></div>
-<% end %>
+
+<% end %><br/>
+
+<%= link_to 'Home', products_path %>

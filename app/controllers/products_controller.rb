@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to products_url
     else
-      render :new
+      render "new"
     end
   end
 
@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     if @product.update_attributes(product_params)
       redirect_to product_path(@product)
     else
-      render :edit      
+      render "edit"      
     end
   end
 
