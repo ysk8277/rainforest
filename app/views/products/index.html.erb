@@ -1,8 +1,6 @@
-<h2>Home</h2>
-
 <p><%= link_to "Add new product", new_product_path %></p>
 
-<h3>All Products</h3>
+<h2>All Products</h2>
 <% @products.each do |product| %>
   <p>Product name: <%= product[:name] %></p>
   <p>Price: $<%= product.formatted_price %></p>
