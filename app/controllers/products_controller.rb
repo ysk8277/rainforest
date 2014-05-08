@@ -3,7 +3,11 @@ class ProductsController < ApplicationController
   before_filter :ensure_logged_in, :only => [:edit, :create, :show, :update, :destroy]
 
   def index
-    @products = Product.all
+   @products = if params[:search]
+      Product.where("name LIKE ?", "%#{params[:search]}%")
+    else
+      Product.all
+    end
   end
 
   def show
