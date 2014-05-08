@@ -1,8 +1,10 @@
 <p><%= link_to "Add new product", new_product_path %></p>
 
 <h2>All Products</h2>
-<% @products.each do |product| %>
-  <p>Product name: <%= product[:name] %></p>
-  <p>Price: $<%= product.formatted_price %></p>
-<%= link_to "Show detail", product_path(product) %> 
+<div id = "products">
+  <% @products.each do |product| %>
+    <p>Product name: <%= product[:name] %></p>
+    <p>Price: $<%= product.formatted_price %></p>
+  <%= link_to "Show detail", product_path(product) %> 
+</div>
 <% end %>
