@@ -1,3 +1,7 @@
+<% if @product.reviews.length <= 1 %>
+<p><em>No Reviews...</em></p>
+<% end %>
+
 <% @product.reviews.each do |review| %>
   <p>
     <%= review.comment %>
