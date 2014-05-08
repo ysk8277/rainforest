@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.build(review_params)
     @review.user_id = current_user.id
       if @review.save
-        redirect_to products_path, notice: "Review created successfully"
+        redirect_to product_path(@product), notice: "Review created successfully"
       else
         render :action => :show
       end
@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to products_path
+    redirect_to product_path(@product), notice: "Review deleted successfully"
   end
 
   private
