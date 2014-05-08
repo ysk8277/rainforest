@@ -1,2 +1,5 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<h2>Reviews for <%= @product.name %></h2>
+
+<%= render 'products/new_review' %> 
+
+<%= link_to "Show detail", product_path(@product) %> 
