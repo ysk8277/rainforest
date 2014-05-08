@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
       if @review.save
         redirect_to product_path(@product), notice: "Review created successfully"
       else
-        render :action => :show
+        redirect_to product_path(@product), notice: "Review cannot be empty"
       end
   end
 
